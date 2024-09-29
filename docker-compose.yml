@@ -6,6 +6,7 @@ services:
     build:
       context: ./iac-text-file
       dockerfile: Dockerfile
+      no_cache: true
     ports:
       - "8090:80"
       - "8091:80"
