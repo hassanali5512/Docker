@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  iac-website:
+    image: iac-website
+    build:
+      context: ./iac-text-file
+      dockerfile: Dockerfile
+    ports:
+      - "8090:80"
+      - "8091:80"
+    container_name: 'iac-website'
+    hostname: 'iac-website'
+    volumes:
+      - ./volume:/opt/volume
